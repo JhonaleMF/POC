@@ -4,7 +4,7 @@ from utils.forms import ValidateDate, ValidateFile, SubmitRetrain
 from utils.models import predictions, modification_data, create_db_csv, modelo_entrenar
 from flask.helpers import flash, url_for
 from werkzeug.utils import redirect
-from config import DATA_BASE, MODEL, USER, PASSWORD, HOST, ENDPOINT
+from utils.config import DATA_BASE, MODEL, USER, PASSWORD, HOST, ENDPOINT
 import pymysql, csv, os
 
 # Setting path init
