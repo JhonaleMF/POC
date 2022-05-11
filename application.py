@@ -1,10 +1,10 @@
 # Import libraries
-from flask import Flask, request, render_template, jsonify, flash
+from flask import Flask, request, render_template, flash
 from utils.forms import ValidateDate, ValidateFile, SubmitRetrain
 from utils.models import predictions, modification_data, create_db_csv, modelo_entrenar
+from utils.config import MODEL, USER, PASSWORD, HOST
 from flask.helpers import flash, url_for
 from werkzeug.utils import redirect
-from utils.config import MODEL, USER, PASSWORD, HOST
 import pymysql, csv, os
 
 # Setting path init
@@ -12,7 +12,7 @@ os.chdir(os.path.dirname(__file__))
 
 # App configurations
 app = Flask(__name__, instance_relative_config=True)
-app.config.from_object("config")
+app.config.from_object("utils.config")
 app.config["DEBUG"] = True
 
 # Endpoints for visual
