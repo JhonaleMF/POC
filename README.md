@@ -1,2 +1,0 @@
-# poc
-poryecto DE POC
